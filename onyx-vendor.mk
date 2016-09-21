@@ -31,6 +31,8 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/onyx/proprietary/bin/rmt_storage:system/bin/rmt_storage \
     vendor/oneplus/onyx/proprietary/bin/sensors.qcom:system/bin/sensors.qcom \
     vendor/oneplus/onyx/proprietary/bin/time_daemon:system/bin/time_daemon \
+    vendor/oneplus/onyx/proprietary/etc/cne/andsfCne.xml:system/etc/cne/andsfCne.xml \
+    vendor/oneplus/onyx/proprietary/etc/cne/SwimConfig.xml:system/etc/cne/SwimConfig.xml \
     vendor/oneplus/onyx/proprietary/etc/data/dsi_config.xml:system/etc/data/dsi_config.xml \
     vendor/oneplus/onyx/proprietary/etc/data/netmgr_config.xml:system/etc/data/netmgr_config.xml \
     vendor/oneplus/onyx/proprietary/etc/firmware/a330_pfp.fw:system/etc/firmware/a330_pfp.fw \
@@ -48,8 +50,10 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/onyx/proprietary/etc/firmware/venus.b04:system/etc/firmware/venus.b04 \
     vendor/oneplus/onyx/proprietary/etc/firmware/venus.mbn:system/etc/firmware/venus.mbn \
     vendor/oneplus/onyx/proprietary/etc/firmware/venus.mdt:system/etc/firmware/venus.mdt \
+    vendor/oneplus/onyx/proprietary/etc/permissions/cneapiclient.xml:system/etc/permissions/cneapiclient.xml \
     vendor/oneplus/onyx/proprietary/etc/permissions/com.google.widevine.software.drm.xml:system/etc/permissions/com.google.widevine.software.drm.xml \
     vendor/oneplus/onyx/proprietary/etc/permissions/qcnvitems.xml:system/etc/permissions/qcnvitems.xml \
+    vendor/oneplus/onyx/proprietary/etc/permissions/com.quicinc.cne.xml:system/etc/permissions/com.quicinc.cne.xml \
     vendor/oneplus/onyx/proprietary/etc/permissions/qcrilhook.xml:system/etc/permissions/qcrilhook.xml \
     vendor/oneplus/onyx/proprietary/lib/hw/camera.vendor.msm8974.so:system/lib/hw/camera.vendor.msm8974.so \
     vendor/oneplus/onyx/proprietary/lib/libFNVfbEngineLib.so:system/lib/libFNVfbEngineLib.so \
@@ -110,6 +114,10 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/onyx/proprietary/vendor/lib/libchromatix_s5k3m2_snapshot.so:system/vendor/lib/libchromatix_s5k3m2_snapshot.so \
     vendor/oneplus/onyx/proprietary/vendor/lib/libchromatix_s5k3m2_video_hd.so:system/vendor/lib/libchromatix_s5k3m2_video_hd.so \
     vendor/oneplus/onyx/proprietary/vendor/lib/libchromatix_s5k3m2_zsl.so:system/vendor/lib/libchromatix_s5k3m2_zsl.so \
+    vendor/oneplus/onyx/proprietary/vendor/lib/libcneapiclient.so:system/vendor/lib/libcneapiclient.so \
+    vendor/oneplus/onyx/proprietary/vendor/lib/libcneconn.so:system/vendor/lib/libcneconn.so \
+    vendor/oneplus/onyx/proprietary/vendor/lib/libcneqmiutils.so:system/vendor/lib/libcneqmiutils.so \
+    vendor/oneplus/onyx/proprietary/vendor/lib/libcne.so:system/vendor/lib/libcne.so \
     vendor/oneplus/onyx/proprietary/vendor/lib/libconfigdb.so:system/vendor/lib/libconfigdb.so \
     vendor/oneplus/onyx/proprietary/vendor/lib/libdataitems.so:system/vendor/lib/libdataitems.so \
     vendor/oneplus/onyx/proprietary/vendor/lib/libdiag.so:system/vendor/lib/libdiag.so \
@@ -243,7 +251,10 @@ PRODUCT_PACKAGES += \
     libTimeService \
     shutdownlistener \
     TimeService \
+	CNEService \
     qcrilmsgtunnel \
+	cneapiclient \
     com.google.widevine.software.drm \
+	com.quicinc.cne \
     qcnvitems \
     qcrilhook
